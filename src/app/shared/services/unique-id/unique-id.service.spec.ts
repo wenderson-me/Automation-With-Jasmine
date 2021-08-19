@@ -31,10 +31,10 @@ describe (UniqueIdService.name, () => {
   });
   it(`#${UniqueIdService.prototype.generateUniqueIdWithPrefix.name}
   should throw when called with empty`, () => {
-    const empytValues = [null, undefined, ''];
+    const empytValues = [null, undefined, '', '0', '1'];
     empytValues.forEach(empytValues => {
       expect(() => service.generateUniqueIdWithPrefix(empytValues)).toThrow()
-      //excessão sempre atraves de uma arrow function
+      //exceção sempre atraves de uma arrow function
     })
   });
 });
