@@ -2,8 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LikeWidgetComponent } from './like-widget.component';
 import { LikeWidgetModule } from './like-widget.module';
 
-LikeWidgetComponent
-
 describe(LikeWidgetComponent.name,  () => {
   //fixture: wrapper que embrulha o componente a ser testado
   let fixture: ComponentFixture<LikeWidgetComponent> = null;
