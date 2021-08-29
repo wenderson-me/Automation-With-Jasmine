@@ -39,15 +39,11 @@ describe(LikeWidgetComponent.name,  () => {
   });
 
   it(`${LikeWidgetComponent.prototype.like.name}
-  should trigger emission when called`, done => {
+  should trigger emission when called`, () => {
     
+    spyOn(component.liked, 'emit');
     fixture.detectChanges();
-    component.liked.subscribe(() => {
-      expect(true).toBeTrue()
-      //asserção assíncrona que é chamada somente se a expectativa for executada
-      done()
-    })
-    //observables
-    component.like()
+    component.like();
+    expect(component.liked.emit).toHaveBeenCalled();
   });
 });
